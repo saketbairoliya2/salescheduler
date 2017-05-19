@@ -18,6 +18,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = [
+	url(r'^user/', include('user.urls')),
+	url(r'^sale/', include('sale.urls')),
     url(r'^admin/', admin.site.urls),
 ]
 
