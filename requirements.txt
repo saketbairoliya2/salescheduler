@@ -1,9 +1,6 @@
 amqp==2.1.4
-APScheduler==3.3.1
-beautifulsoup4==4.5.3
 billiard==3.5.0.2
 bleach==1.5.0
-celery==4.0.2
 cssselect==1.0.1
 dj-database-url==0.4.1
 dj-static==0.0.6
