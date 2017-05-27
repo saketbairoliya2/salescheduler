@@ -1,0 +1,1 @@
+web: gunicorn salescheduler.wsgi --log-file=-
