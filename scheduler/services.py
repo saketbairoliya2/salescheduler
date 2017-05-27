@@ -59,9 +59,6 @@ def schedule_g_calendar_event(appointment):
     http = credentials.authorize(httplib2.Http())
     service = discovery.build('calendar', 'v3', http=http)
     event = {
-        'summary': 'Scribe Demo',
-        'location': 'Online',
-        'description': 'Scribe demo',
         'start': {
             'dateTime': datetime.datetime.combine(appointment.date, appointment.start_time).isoformat(),
             'timeZone': 'UTC',
@@ -75,11 +72,13 @@ def schedule_g_calendar_event(appointment):
             {'email': appointment.client_email},
         ],
         'reminders': {
-            'useDefault': False,
+            'useDefault': True,
             'overrides': [
-                {'method': 'email', 'minutes': 24 * 60},
-                {'method': 'popup', 'minutes': 10},
+                {'method': 'email', 'minutes': 60}
             ],
         },
+        'summary': 'Sales call Demo',
+        'location': 'Google Hangout',
+        'description': 'Demo call for sales folks',
     }
     event = service.events().insert(calendarId=appointment.user.caleder.first().calender_id, body=event, sendNotifications=True,).execute()
