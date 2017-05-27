@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List of Scheduled Demo</title>
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<!--Import materialize.css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" />
+	<!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+</head>
+
+<header>
+<nav>
+    <div class="nav-wrapper teal lighten-2">
+      <a href="#!" class="brand-logo center">Schedule your calls</a>
+    </div>
+</nav>
+</header>
+
+<br/>
+
+<body>
+	<div class="container">
+		{% if appointments %}
+			<section>
+			<div class="row">
+	      		<div class="col s12 m5">
+	        	<div class="card-panel grey lighten-4">
+				<ul>
+					<lh><b>id client_email 		user</b></lh> 
+				{% for appointment in appointments %}
+					<li>
+					{{appointment.id}} -
+					{{appointment.client_email}} - 
+					{{appointment.user}}
+					</li>
+				{% endfor %}
+				</ul>
+				</div>
+				</div>
+			</div>
+			</section>
+		{% endif %}
+	</div>
+</body>
+
+<footer class="page-footer teal lighten-2">
+      <div class="footer-copyright">
+        <div class="container">
+        © 2017 Call Scheduler
+        </div>
+      </div>
+</footer>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		//button function to add multiple dates.
+		$('#appointmentDate').on('change', function(){
+			window.location.href = $('#appointmentDate').val().replace(/-/g,'/');
+		});
+	});
+</script>
+<style type="text/css">
+	select {
+		display: block !important;
+	}
+</style>
+
+
+</html>
