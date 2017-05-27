@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 import dj_database_url
-from boto.s3.connection import S3Connection
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -34,9 +33,9 @@ ALLOWED_HOSTS = ['0.0.0.0', '.herokuapp.com', '127.0.0.1', 'localhost']
 #G_CLIENT_ID = '159903720902-h0ch46tvasukutk1fvs9bhct5padpl02.apps.googleusercontent.com'
 #G_CLIENT_SECRET = 'HXbMKabyOXmLNu_a56CvK6mm'
 #G_REDIRECT_URI = 'http://127.0.0.1:8000/scheduler/attach_calender/'
-G_CLIENT_ID = os.environ['G_CLIENT_ID']
-G_CLIENT_SECRET = os.environ['G_CLIENT_SECRET']
-G_REDIRECT_URI = os.environ['G_REDIRECT_URI']
+G_CLIENT_ID = os.environ.get('G_CLIENT_ID')
+G_CLIENT_SECRET = os.environ.get('G_CLIENT_SECRET')
+G_REDIRECT_URI = os.environ.get('G_REDIRECT_URI')
 
 # Application definition
 
