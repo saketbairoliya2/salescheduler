@@ -34,8 +34,6 @@ class AppointmentSlotsForm(forms.Form):
         start_end_times = []
         for start_end in self.cleaned_data['start_end_time']:
             start, end = start_end.split('-')
-            start, end = datetime.time(*list(map(int,start.split(':')))),\
-                         datetime.time(*list(map(int,end.split(':'))))
             start_end_times.append((start,end))
         return start_end_times
 

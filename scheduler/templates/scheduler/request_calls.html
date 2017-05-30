@@ -39,12 +39,11 @@
 	      		<div class="col s12 m5">
 	        	<div class="card-panel grey lighten-4">
 				<ul>
-					<lh><b>id client_email 		user</b></lh> 
+					<lh><b>id client_email</b></lh> 
 				{% for appointment in appointments %}
 					<li>
 					{{appointment.id}} -
-					{{appointment.client_email}} - 
-					{{appointment.user}}
+					{{appointment.client_email}}
 					</li>
 				{% endfor %}
 				</ul>

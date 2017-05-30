@@ -36,7 +36,8 @@ def get_available_slots_by_date(date):
         if value>0:
             available_slots_list.\
             append(datetime.time(*list(map(int,key.split(':')))))
-    return available_slots_list
+
+    return sorted(available_slots_list)
 
 
 '''compute sales reps available for given date and time.

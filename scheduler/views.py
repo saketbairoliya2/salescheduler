@@ -27,6 +27,7 @@ def index(request):
 	    form = AppointmentSlotsForm(request.POST)
 	    if form.is_valid():
 	        form.save(request.user)
+	        return render(request, 'scheduler/slot_booked.html')
 	else:
 		form = AppointmentSlotsForm()
 	calendar_attached = False

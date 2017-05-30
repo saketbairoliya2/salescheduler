@@ -11,13 +11,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
     <style>
-		#signup {
-		    margin: auto;
-		    width: 50%;
-		    border: 3px solid teal;
-		    padding: 10px;
-		}
-
 		#footer {
 		   position:absolute;
 		   bottom:0;
@@ -38,14 +31,14 @@
 
 <br/>
 <body>
-	<div class="container" id="signup">
+	<div class="container center">
 		<div class="row">
 	    	<div class="col s12 m5">
-			<h4>Sign up</h4>
+			<h4 class="card-panel teal lighten-5">Sign up</h4>
 			<form method="post">
 				{% csrf_token %}
 				{{ form.as_p }}
-				<button class="btn waves-effect waves-light" type="submit">Sign up</button>
+			<button class="btn waves-effect waves-light" type="submit">Sign up</button>
 			</form>
 			</div>
 		</div>
