@@ -2,13 +2,23 @@
 <html>
 <head>
   <title>Welcome to Calender.</title>
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
   <!--Import materialize.css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css"/>
   <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+  <style>
+    #footer {
+       position:absolute;
+       bottom:0;
+       width:100%;
+       height:60px;   /* Height of the footer */
+       background:#6cf;
+    }
+  </style>
 </head>
 
 <header>
@@ -38,13 +48,13 @@ Another webpage where a call request (start time of the call) can be defined alo
       </div>
       <div class="divider"></div>
       <div class="section">
-        <p>Use "https://salescheduler.herokuapp.com/scheduler/" for scheduling your call.</p>
-        <p>Use "https://salescheduler.herokuapp.com/scheduler/available-slots/" for checking available slots. </p>
+        <p>Use <a href="https://salescheduler.herokuapp.com/scheduler/">"https://salescheduler.herokuapp.com/scheduler/"</a> for scheduling your call.</p>
+        <p>Use <a href="https://salescheduler.herokuapp.com/scheduler/available-slots/">"https://salescheduler.herokuapp.com/scheduler/available-slots/"</a> for checking available slots. </p>
       </div>
      </div>
    </body>
 
-<footer class="page-footer teal lighten-2">
+<footer class="page-footer teal lighten-2" id="footer">
       <div class="footer-copyright">
         <div class="container">
         © 2017 Call Scheduler
